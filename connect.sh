@@ -10,7 +10,7 @@ if [[ ! -f $CONFIG ]]; then
   exit 1
 fi
 
-if [[ ! -f "$AUTH" ]] || [[ $(wc -l < "$AUTH") -ne 2 ]]; then
+if [[ ! -f "$AUTH" ]] || [[ $(wc -l < "$AUTH") -ge 2 ]]; then
   echo "Auth file ($AUTH) must contain your name on the first line and a random string on the second" >&2
   exit 1
 fi
